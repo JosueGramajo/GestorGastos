@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "762049378521",
+    "project_id": "app-gastos-4cd1e",
+    "storage_bucket": "app-gastos-4cd1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762049378521:android:066bc9b90ac2fda82266c8",
+        "android_client_info": {
+          "package_name": "com.jgramajo.appgastos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762049378521-ksdkio0vi9s9e5rer1iin1eb6nuqq5so.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyEO8yswYF1_1NVQ2KRkMRp5_9aZHR3Sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762049378521-ksdkio0vi9s9e5rer1iin1eb6nuqq5so.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
