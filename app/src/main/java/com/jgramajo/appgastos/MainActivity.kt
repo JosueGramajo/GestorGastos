@@ -21,6 +21,10 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
+import com.google.android.gms.common.api.ApiException
+
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.tasks.Task
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,6 +40,17 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var resultLauncher : ActivityResultLauncher<Intent>
 
+
+    private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
+        try {
+            val account: GoogleSignInAccount? = completedTask.getResult(ApiException::class.java)
+
+            print("")
+        } catch (e: ApiException) {
+            e.printStackTrace()
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -47,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                 result.data?.let { dt ->
                     val task = GoogleSignIn.getSignedInAccountFromIntent(dt)
 
-                    print("")
+                    handleSignInResult(task)
                 }
             }
         }
